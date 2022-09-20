@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Matematikkworkshop, KJM1130 (H22) &#8212; Matematikkworkshop - KJM1130</title>
+    <title>Interlude - Riemann-summer &#8212; Matematikkworkshop - KJM1130</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,11 +50,10 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Motivasjon" href="docs/motivasjon.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -108,8 +107,8 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
                     Matematikkworkshop, KJM1130 (H22)
                 </a>
             </li>
@@ -133,11 +132,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="docs/eksakt_ineksakt.html">
    Eksakte og ineksakte differensialer
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="docs/fordelinger.html">
-   Fordelingsfunksjoner
   </a>
  </li>
 </ul>
@@ -191,6 +185,35 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/audunsh/matematikkworkshop/master?urlpath=tree/docs/fordelinger.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -230,7 +253,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/audunsh/matematikkworkshop/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/audunsh/matematikkworkshop/issues/new?title=Issue%20on%20page%20%2Ffordelinger.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -258,7 +281,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/intro.md"
+        <a href="_sources/fordelinger.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -269,7 +292,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.md</span>
+<span class="headerbtn__text-container">.ipynb</span>
 </a>
 
       </li>
@@ -295,23 +318,90 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Interlude - Riemann-summer
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fra-eksperiment-til-teori-og-tilbake-igjen">
+   Fra eksperiment til teori og tilbake igjen
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fordelingsfunksjoner">
+   Fordelingsfunksjoner
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#forventningsverdier">
+   Forventningsverdier
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Matematikkworkshop, KJM1130 (H22)</h1>
+                <h1>Interlude - Riemann-summer</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Interlude - Riemann-summer
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fra-eksperiment-til-teori-og-tilbake-igjen">
+   Fra eksperiment til teori og tilbake igjen
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fordelingsfunksjoner">
+   Fordelingsfunksjoner
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#forventningsverdier">
+   Forventningsverdier
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -319,34 +409,97 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="matematikkworkshop-kjm1130-h22">
-<h1>Matematikkworkshop, KJM1130 (H22)<a class="headerlink" href="#matematikkworkshop-kjm1130-h22" title="Permalink to this headline">#</a></h1>
-<p><b>Av:</b> Audun Skau Hansen <a href="mailto:a.s.hansen@kjemi.uio.no">✉️</a></p>
-<hr class="docutils" />
-<p>Termodynamikk og statistisk mekanikk benytter en del notasjon og matematiske konsepter som kan være ukjente for flere. Målet med denne workshopen er å bli komfortabel med slik notasjon, og gi deg verktøy for å løse problemer som måtte oppstå på veien gjennom de mer teori- og matematikk-tunge emnene som du tar ved instituttet.</p>
-<p>La oss holde det litt uformelt, og still gjerne spørsmål underveis. Disse nettsidene vil bli værende online, men kan bli oppdatert og videreutviklet. Ved siden av pizza står følgende tema på dagens meny:</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="docs/motivasjon.html">Motivasjon</a></li>
-<li class="toctree-l1"><a class="reference internal" href="docs/derivasjon.html">Den deriverte : endring</a></li>
-<li class="toctree-l1"><a class="reference internal" href="docs/derivasjon.html#eksempel-numerisk-derivasjon">Eksempel: numerisk derivasjon</a></li>
-<li class="toctree-l1"><a class="reference internal" href="docs/derivasjon.html#flervariable-funksjoner">Flervariable funksjoner</a></li>
-<li class="toctree-l1"><a class="reference internal" href="docs/derivasjon.html#krise-jeg-kan-ikke-derivere">Krise! Jeg kan ikke derivere!</a></li>
-<li class="toctree-l1"><a class="reference internal" href="docs/derivasjon.html#derivasjon-med-sympy">Derivasjon med Sympy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="docs/derivasjon.html#nyttige-relasjoner-for-partial-operatoren">Nyttige relasjoner for <span class="math notranslate nohighlight">\(\partial\)</span>-operatoren</a></li>
-<li class="toctree-l1"><a class="reference internal" href="docs/sympy.html">Sympy-interlude</a></li>
-<li class="toctree-l1"><a class="reference internal" href="docs/sympy.html#sympy-implementasjon">Sympy-implementasjon</a></li>
-<li class="toctree-l1"><a class="reference internal" href="docs/eksakt_ineksakt.html">Eksakte og ineksakte differensialer</a></li>
-<li class="toctree-l1"><a class="reference internal" href="docs/eksakt_ineksakt.html#motivasjon-nettodistanse-og-tilbakelagt-distanse">Motivasjon: nettodistanse og tilbakelagt distanse</a></li>
-<li class="toctree-l1"><a class="reference internal" href="docs/eksakt_ineksakt.html#matematisk-grunnlag">Matematisk grunnlag</a></li>
-<li class="toctree-l1"><a class="reference internal" href="docs/eksakt_ineksakt.html#hvorfor-er-dette-nyttig-a-kunne">Hvorfor er dette nyttig å kunne?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="docs/fordelinger.html">Fordelingsfunksjoner</a></li>
-<li class="toctree-l1"><a class="reference internal" href="docs/fordelinger.html#interlude-riemann-summer">Interlude - Riemann-summer</a></li>
-<li class="toctree-l1"><a class="reference internal" href="docs/fordelinger.html#fra-eksperiment-til-teori-og-tilbake-igjen">Fra eksperiment til teori og tilbake igjen</a></li>
-<li class="toctree-l1"><a class="reference internal" href="docs/fordelinger.html#sannsynlighettsfordelinger">Sannsynlighettsfordelinger</a></li>
-<li class="toctree-l1"><a class="reference internal" href="docs/fordelinger.html#forventningsverdier">Forventningsverdier</a></li>
-</ul>
+  <section class="tex2jax_ignore mathjax_ignore" id="interlude-riemann-summer">
+<h1>Interlude - Riemann-summer<a class="headerlink" href="#interlude-riemann-summer" title="Permalink to this headline">#</a></h1>
+<p>En Riemann-sum kan ansees som en approksimasjon på et integral:</p>
+<div class="math notranslate nohighlight">
+\[
+\sum_{i=0}^{a+i\Delta x=b} f(a + i\Delta x) \Delta x \approx \int_a^b f(x) dx.
+\]</div>
+<p>Fra et numerisk perspektiv innebærer dette en diskretisering av rommet, ettersom vi kun betrakter diskrete verdier for <span class="math notranslate nohighlight">\(x \rightarrow x_i\)</span>.</p>
+<p>Dette bør ikke være ukjent, for du er vant til å regne diskrete gjennomsnitt:</p>
+<div class="math notranslate nohighlight">
+\[
+\bar{x} := \frac{1}{N} \sum_{i=1}^{N} x_i,
+\]</div>
+<p>diskret varians (og standardavvik):</p>
+<div class="math notranslate nohighlight">
+\[
+\sigma^2 := \frac{1}{N-1} \sum_{i=1}^{N} (x_i-\bar{x})^2,
+\]</div>
+<p>og forventningsverdier:</p>
+<div class="math notranslate nohighlight">
+\[
+\bar{E} := \frac{1}{N} \sum_{i=1}^{N} E_i n_i,
+\]</div>
+<p>hvor <span class="math notranslate nohighlight">\(n_i\)</span> er antallet målinger med verdien <span class="math notranslate nohighlight">\(E_i\)</span>.</p>
+<div class="admonition-diskuter admonition">
+<p class="admonition-title">Diskuter</p>
+<p>Selv om du sikkert kjenner disse størrelsene godt, er det muligens uvant å se de omtalt som <em>diskrete</em>. Hva menes med <em>diskret</em> i dette tilfellet? Hva ville vært den <em>kontinuerlige</em> motsatsen?</p>
 </div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="fra-eksperiment-til-teori-og-tilbake-igjen">
+<h1>Fra eksperiment til teori og tilbake igjen<a class="headerlink" href="#fra-eksperiment-til-teori-og-tilbake-igjen" title="Permalink to this headline">#</a></h1>
+<p>I et typisk laboratorieekseperiment kan vi ikke gjøre uendelig mange målinger (<a href="https://github.com/audunsh/Notater-om-signifikans/blob/master/signotes.pdf">se her for mer info</a>). Om vi for eksempel måler høyden på verdens 20-åringer, men ikke har mulighet å måle alle, kan vi presentere resultatene i et histogram:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">height_distribution</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">170</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10000</span> <span class="p">)</span> 
+
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">height_distribution</span><span class="p">,</span><span class="n">bins</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([1.200e+01, 5.700e+01, 1.850e+02, 4.890e+02, 9.880e+02, 1.526e+03,
+        1.962e+03, 1.872e+03, 1.442e+03, 8.670e+02, 4.060e+02, 1.380e+02,
+        4.500e+01, 1.000e+01, 1.000e+00]),
+ array([135.81876356, 140.79784023, 145.77691691, 150.75599358,
+        155.73507026, 160.71414693, 165.6932236 , 170.67230028,
+        175.65137695, 180.63045363, 185.6095303 , 190.58860698,
+        195.56768365, 200.54676033, 205.525837  , 210.50491368]),
+ &lt;BarContainer object of 15 artists&gt;)
+</pre></div>
+</div>
+<img alt="_images/fordelinger_4_1.png" src="_images/fordelinger_4_1.png" />
+</div>
+</div>
+<p>Hvordan omdanner vi denne empiriske kunnskapen til en prediksjon om neste måling? Altså; neste gang du måler høyden til en person - hva er sannsynligheten for at vedkommende er for eksempel mellom 160 og 180 cm høy?</p>
+<p>For å gjøre dette må vi omdanne histogrammet til en normalisert sannsynlighetsfordeling, enten ved å normalisere histogrammet slik at summen over alle søylene blir 1, eller ved å tilpasse målingene til en generell normalfordeling og derette bruke denne som prediksjon.</p>
+<div class="admonition-diskuter admonition">
+<p class="admonition-title">Diskuter</p>
+<p>Når vi går fra eksperiment til teori er transformasjonen fra diskret til kontinuerlig. Hvordan tror du det er den andre veien (fra teori til eksperiment)?</p>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="fordelingsfunksjoner">
+<h1>Fordelingsfunksjoner<a class="headerlink" href="#fordelingsfunksjoner" title="Permalink to this headline">#</a></h1>
+<p>Fordelingsfunksjoner er matematiske, kontinuerlige funksjoner som angir sannsynligheten for ulike utfall av eksperimenter. Med eksperiment menes her utfallet av en måling, test eller lignende. Noen eksempler på fordelingsfunksjoner kan være:</p>
+<ul class="simple">
+<li><p>En tabell over mulige utfall av et terningkast.</p></li>
+<li><p>Et histogram over en aldersfordeling.</p></li>
+<li><p>Kvadratet av en atomær orbital.</p></li>
+<li><p>En kontinuerlig hastighetsfordeling for pollenfrø i en væske.</p></li>
+</ul>
+<p>En sannsynlighet P er et tall, som regel mellom 0 og 1:</p>
+<ul class="simple">
+<li><p>At <span class="math notranslate nohighlight">\(P(A)=0\)</span> innebærer at sannsynligheten for at <span class="math notranslate nohighlight">\(A\)</span> inntreffer er 0.</p></li>
+<li><p>At <span class="math notranslate nohighlight">\(P(B)=1\)</span> innebærer at sannsynligheten for at <span class="math notranslate nohighlight">\(B\)</span> inntreffer er 1.</p></li>
+<li><p>Når <span class="math notranslate nohighlight">\(P(C) \in (0,1)\)</span> betyr det at <span class="math notranslate nohighlight">\(C\)</span> inntreffer med en viss sannsynlighet.</p></li>
+</ul>
+<div class="admonition-diskuter admonition">
+<p class="admonition-title">Diskuter</p>
+<p>Hva er sannsynlighetsfordelingen for summen av to terningkast? Skriv ned og forklar.</p>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="forventningsverdier">
+<h1>Forventningsverdier<a class="headerlink" href="#forventningsverdier" title="Permalink to this headline">#</a></h1>
+<p>Gjennomsnitt og lignende størrelser er det vi generelt kalles <em>forventningsverdier</em>, og fra en kontinuerlig fordeling regnes de på formen:</p>
+<div class="math notranslate nohighlight">
+\[
+\langle X \rangle := \int_{-\infty}^{\infty} X P(X)
+\]</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -376,13 +529,6 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='right-next' id="next-link" href="docs/motivasjon.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Motivasjon</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
 </div>
             </footer>
         </div>
